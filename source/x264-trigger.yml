@@ -1,0 +1,19 @@
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: x264-trigger
+  namespace: sample-video-coding-ns
+  annotations:
+     description: "Trigger used to send events from the broker to the x264 encoder function"
+spec:
+  broker: video-coding-broker
+  filter:
+    attributes:
+      # This trigger activates if a CloudEvent with header ce-type has value x264
+      type: x264
+  subscriber:
+    ref:
+     apiVersion: serving.knative.dev/v1
+     kind: Service
+     name: x264-fn-events
+    uri: /x264-fn-events

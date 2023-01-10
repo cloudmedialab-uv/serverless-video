@@ -1,0 +1,42 @@
+kind: Service
+apiVersion: serving.knative.dev/v1
+metadata:
+  name: x264-fn-events
+  namespace: sample-video-coding-ns
+spec:
+  template:
+    metadata:
+      name: x264-fn-events-v1
+      annotations:
+         # 1 request per pod (no concurrency)
+         autoscaling.knative.dev/metric: "concurrency"
+         autoscaling.knative.dev/target: "1"
+         autoscaling.knative.dev/minScale: "1"
+         autoscaling.knative.dev/maxScale: "10"
+         autoscaling.knative.dev/target-utilization-percentage: "100"
+    spec:
+      containers:
+        - image: cloudmedialab/x264-fn-events:1.0
+          env:
+            - name: SERVICE_PORT
+              value: "8080"
+            - name: SERVICE_PATH
+              value: "/x264-fn-events"
+            - name: HEALTH_PATH
+              value: "/health"
+            - name: METRICS_PATH
+              value: "/metrics"
+            - name: LOG_LEVEL
+              value: "DEBUG"
+            - name: EVENT_CONSUMER_URL
+              value: ""
+          resources:
+            requests:
+              cpu: "3000m"
+              memory: "2.5Gi"
+          livenessProbe:
+            httpGet:
+              path: /health
+          readinessProbe:
+            httpGet:
+              path: /health
