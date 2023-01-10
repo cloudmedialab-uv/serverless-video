@@ -17,7 +17,7 @@
 
 # Clone the project
 
-    git clone https://routerdi1315.uv.es:10000/review-serverless/sample-deployment.git
+git clone https://github.com/cloudmedialab-uv/serverless-video.git
 
 You will need a working knative platform to deploy this example. This is out of scope of this
 document, but a working testbed can be built using kind or minikube.
