@@ -15,6 +15,13 @@
 
 <a id="org54e81c8"></a>
 
+# Cite
+These artifacts have been used in the following paper: 
+
+Event-Driven Serverless Pipelines for Video Coding and Quality Metrics.
+Accepted for publication in Journal of Grid Computing.
+DOI: 10.1007/s10723-023-09647-0
+
 # Clone the project
 
 git clone https://github.com/cloudmedialab-uv/serverless-video.git
