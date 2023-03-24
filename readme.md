@@ -15,12 +15,6 @@
 
 <a id="org54e81c8"></a>
 
-# Cite
-These artifacts have been used in the following paper: 
-
-Event-Driven Serverless Pipelines for Video Coding and Quality Metrics.
-Accepted for publication in Journal of Grid Computing.
-DOI: 10.1007/s10723-023-09647-0
 
 # Clone the project
 
@@ -225,7 +219,7 @@ you can send a CloudEvent.
 ## Send CloudEvent to the Broker
 
 You can send an HTTP request directly to the Knative Broker with the correct CloudEvent headers and body.
-
+SoftwareX
 Deploy a curl pod in the namespace and start a shell in the container:
 
     kubectl --namespace sample-video-coding-ns run curl --image=radial/busyboxplus:curl -it
@@ -275,3 +269,21 @@ You should see a response like this one:
         "size": 19082
       }
     ]
+
+# Cite
+These artifacts have been used in the following paper:
+
+```bib
+@article{10.1007/s10723-023-09647-0,
+authors={Wilmer Moina-Rivera and Miguel Garcia-Pineda and Jose M. Claver and Juan Gutiérrez-Aguado},
+journal={Journal of Grid Computing},
+title={Event-Driven Serverless Pipelines for Video Coding and Quality Metrics},
+vol={Under revision},
+year={2023},
+vol={21},
+doi={10.1007/s10723-023-09647-0},
+}
+```
+
+
+
