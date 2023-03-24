@@ -10,11 +10,9 @@
 7.  [Send and verify CloudEvents to encode a video segment](#org1c7a5aa)
     1.  [Send CloudEvent to the Broker](#org7a18784)
     2.  [Check that the encoded video has been uploaded](#org61dcc74)
-
-
+8.  [Cite](#org54eaabb)
 
 <a id="org54e81c8"></a>
-
 
 # Clone the project
 
@@ -270,7 +268,10 @@ You should see a response like this one:
       }
     ]
 
+<a id="org54eaabb"></a>
+
 # Cite
+
 These artifacts have been used in the following paper:
 
 ```bib
