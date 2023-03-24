@@ -279,9 +279,8 @@ These artifacts have been used in the following paper:
 authors={Wilmer Moina-Rivera and Miguel Garcia-Pineda and Jose M. Claver and Juan Gutiérrez-Aguado},
 journal={Journal of Grid Computing},
 title={Event-Driven Serverless Pipelines for Video Coding and Quality Metrics},
-vol={Under revision},
-year={2023},
 vol={21},
+year={2023},
 doi={10.1007/s10723-023-09647-0},
 }
 ```
